@@ -92,12 +92,41 @@ class SortingRobot:
         """
         return self._light == "ON"
 
+    
+    #BUBBLE SORT?
+    
     def sort(self):
-        """
-        Sort the robot's list.
-        """
-        # Fill this out
-        pass
+        
+        self.set_light_on()
+        while self.light_is_on():
+            self.swap_item()
+            while self.can_move_right():
+                self.move_right()
+                if self.compare_item() >= 0:
+                    self.swap_item()
+            while self.can_move_left():
+                self.move_left()
+            while self.can_move_right() and self.compare_item() is not None:
+                self.move_right()
+            self.swap_item()
+            self.move_right()
+
+            if not self.can_move_right():
+                print("======================= \n")
+                print('Sorting Complete')
+                print("Robot I.D. = 1430121")
+                print("Sorting Report: \n")
+                print("1. Turned Light On")
+                print("2. Picked Up Item")
+                print("3. Can Move Right?")
+                print("4. Sorted While Moving Right")
+                print("5. Traverse To Start")
+                print("6. Traverse Back To Filter")
+                print("7. Reached End Of Sort List. Goodbye \n")
+                print("=======================")
+                self.set_light_off()
+                
+                    
 
 
 if __name__ == "__main__":
