@@ -94,6 +94,15 @@ class SortingRobot:
 
     
     #BUBBLE SORT?
+    # Moving operations use the prebuilt methods
+    # Set Light on
+    # while light is on
+        # start sorting
+        # move right
+        # sort till the end
+    # move left?
+        # move left
+        
     
     def sort(self):
         
@@ -121,7 +130,7 @@ class SortingRobot:
                 print("3. Can Move Right?")
                 print("4. Sorted While Moving Right")
                 print("5. Traverse To Start")
-                print("6. Traverse Back To Filter")
+                print("6. Traverse Again To Filter")
                 print("7. Reached End Of Sort List. Goodbye \n")
                 print("=======================")
                 self.set_light_off()
